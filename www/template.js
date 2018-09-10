@@ -1,3 +1,4 @@
+cordova.define("cordova-plugin-metronomeplugin.MetronomePlugin", function(require, exports, module) {
 /* global cordova:false */
 /* globals window */
 
@@ -18,3 +19,9 @@ var template = {
 };
 
 module.exports = template;
+
+module.exports = function setBeat(speed, callback) {
+    exec(callback, callback, 'Echo', 'setBeatSpeed', [speed]);
+};
+
+});
